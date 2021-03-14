@@ -37,19 +37,24 @@ a {
 /* ヘッダー */
 
 .header {
-  margin-bottom: 48px;
   padding: 20px 0;
-
+  background-color: lightblue;
 }
 
 .inner {
   width: 1024px;
   margin: 0 auto;
+  background-color: white;
 }
 .nav {
   width: 100%;
   display: flex;
   justify-content: space-between;
+  background-color: lightblue;
+}
+
+.nav__right {
+  margin-block-start: auto;
 }
 .logo {
   width: 500px;
@@ -57,15 +62,16 @@ a {
 }
 .nav__btn{
   display: inline-block;
-  padding: 0.5em 1.2em;
+  padding: 0.1em 0.5em;
   font-size: 2em;
-  color: #87CEFA;
+  color: white;
   text-decoration: none;
   user-select: none;
-  border: 1px #87CEFA solid;
+  border: 1px white solid;
   border-radius: 3px;
   transition: 0.4s ease;
   margin-right: 15px;
+  background-color: lightblue;
 }
 .nav__btn:hover{
   color: #fff;
@@ -122,11 +128,53 @@ a {
 
 /* メイン */
 
-.top-main {
+.main-header {
   width: 100vw;
-  height: 300px;
+  height: 500px;
+  background-image:url("https://assets.st-note.com/production/uploads/images/24700209/rectangle_large_type_2_a268a720fa9a755dd009f20b6e14748f.jpeg?width=800") ;
+  background-size: 100%;
+  background-repeat: no-repeat;
 }
 
+.service-title{
+  color: white;
+  font-size: 80px;
+  padding-left: 100px;
+  padding-top: 30px;
+}
+
+.main-center{
+  background-color:lightblue;
+  margin: 0, 50px, 0 ,50px;
+}
+
+.center{
+  display: flex;
+  
+}
+@import url('https://fonts.googleapis.com/css?family=Noto+Serif+JP');
+
+h3{
+  font-family: 'Noto Serif JP', sans-serif;
+  padding-top: 20px;
+  font-size: 40px;
+  margin-right: 200px;
+}
+
+.tenten{
+
+  padding-top: 70px;
+}
+p{
+  margin-left: 20px;
+  font-size: 30px;
+  padding-bottom: 15px;
+  font-family: 'Noto Serif JP', sans-serif;
+}
+
+.under{
+  border-bottom: solid 3px #87CEFA;
+}
 .mainimg {
   width: 100vw;
   height: 300px;
@@ -146,8 +194,13 @@ a {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  align-items: center;
   min-height: calc(100vh - 161px);
+}
+
+h4{
+  font-size: 50px;
+  font-family: 'Noto Serif JP', sans-serif;
+  margin-left: 25%;
 }
 .card {
   width: calc((100% - 50px) / 3);
