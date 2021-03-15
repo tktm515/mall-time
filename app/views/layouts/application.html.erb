@@ -16,29 +16,41 @@
       <div class="inner">
         <div class="nav">    
           <div class="nav__left">
-          
-            <%= link_to image_tag("https://r70.cooltext.com/rendered/cooltext379003715199818.png", class: :logo), root_path %>
+            <%= link_to image_tag("https://r69.cooltext.com/rendered/cooltext379068498639401.png", class: :logo), root_path %>
           </div>
           <%# ログインしているときは以下を表示するようにしましょう %>
-          <% if user_signed_in? %>
-            <div class="nav__right"> 
-              <%= link_to "マイページ", "#", class: :nav__btn %>
-              <%= link_to "ログアウト", "#", method: :delete, class: :nav__logout %>
-            </div>  
-          <% else %>
-          <%# ログインしていないときは以下を表示するようにしましょう %>
-            <div class="nav__right">
-              <%= link_to "ログイン", "#", class: :nav__btn %>
-              <%= link_to "新規登録", "#", class: :nav__btn %>
-            </div>
-          <% end %>
+          <div class="nav__right">
+            <% if user_signed_in? %>
+              <div class="nav__right_in"> 
+                <%= link_to "マイページ", "#", class: :nav__btn %>
+                <%= link_to "ログアウト", "#", method: :delete, class: :nav__logout %>
+                <%= link_to "Mall:page", "#", class: :nav__btn %>
+              </div>  
+            <% else %>
+            <%# ログインしていないときは以下を表示するようにしましょう %>
+              <div class="nav__right_in">
+                <%= link_to "ログイン", "#", class: :nav__btn %>
+                <%= link_to "新規登録", "#", class: :nav__btn %>
+                <%= link_to "Mall:page", "#", class: :nav__btn %>
+              </div>
+            <% end %>
+          </div>
         </div>
       </div>
-    </div>
     </header>
     <%= yield %>
     <footer class="footer">
-      <p class="copyright">Copyright © PROTO SPACE All rights reserved.</p>
+      <div class="foot-utility_container">
+        <ul class="foot-utilityNav_list">
+          <li><%= link_to "店舗情報・お問い合わせ", "#", class: :footer_btn%></li>
+          <li><%= link_to "サイトマップ", "#", class: :footer_btn%></li>
+          <li><%= link_to "プライバシーポリシー", "#", class: :footer_btn%></li>
+          <li><%= link_to "推奨環境", "#", class: :footer_btn%></li>
+          <li><%= link_to "ご利用規約", "#", class: :footer_btn%></li>
+          <li><%= link_to "テナント様はこちら", "#", class: :footer_btn%></li>
+        </ul>
+      <p class="copyright">Copyright © Mall Time All rights reserved.</p>
+      </div>
     </footer>
   </body>
 </html>

@@ -4,38 +4,56 @@
       <h2 class='service-title'>
         お買い物を効率よく！
       </h2>
-      </div>
-  </div>
-  <div class ="main-center">
-     
-  <div class="inner">
-  <div class="center">
-      <h3>
-      【Mall Timeとは？！】
-      </h3>
-      <%= image_tag("https://www.silhouette-illust.com/wp-content/uploads/2019/11/restaurant_map_marker_48579-101x101.jpg", class:"list-pict") %>
-      <p class="tenten">...</p>
-      <%= image_tag("https://www.silhouette-illust.com/wp-content/uploads/2019/10/takeout_mochikaeri_46525-101x101.jpg", class:"list-pict") %>
-      
-  </div>
-      <p>    
-        大好きなレストランの料理をテイクアウト！
-      </p>
-      <p>
-        帰りに出来立て料理を受け取れる<span class="under">テイクアウト予約アプリ</span>の登場です！
-    </p>
-  
-    <div class="card__wrapper">
-      <h4>
-        ★Restaurant一覧★
-        </h4>
-      <%# 投稿機能実装後、部分テンプレートでプロトタイプ投稿一覧を表示する %>
-      <%#<%= render partial: "prototype", collection: @prototypes %>
     </div>
   </div>
-  
-    
-    
-  </div>
+  <div class ="main-body">
+    <div class="contact-left">
+      <h5>【施設情報】</h5>
+        <ul>
+          <li class="time">
+            <span class="title">【営業時間】</span>
+            <p class="txt">Mall茨木専門店<br>・10:00～21:00<br><br>Mallスタイル茨木<br>・9:00～22:00<br><br>Mallスタイル茨木食品売場<br>・8:00～23:00<br><br>駐車場<br>・7:00～0:30<br><span style="color:#ff0000;">※最新の営業時間はMallトップページよりご確認くださいますようお願いいたします。</span><br>
+            </p>
+          </li>
+        
+          <li class="position">
+            <span class="title">【所在地】</span>
+            <p class="txt">〒567-1234<br>大阪府茨木市いばらき町1-1-1</p>
+          </li>
+        
+          <li class="phone">
+          <span class="title">【お客さま専用ダイヤル】</span>
+            <p class="txt">072-123-4567</p>
+          </li>
+        </ul>
+        <h5>【Mall情報】<h5>
+        <%= link_to image_tag("https://www.aeon.jp/sc/ibaraki/img/index/side/taxfree.jpg", class: :banar), "#" %>
+        <%= link_to image_tag("https://www.aeon.jp/sc/ibaraki/img/index/side/side_2020recruit.jpg", class: :banar), "#" %>
+        <%= link_to image_tag("https://www.aeon.jp/sc/ibaraki/img/index/banner/parking.jpg", class: :banar), "#" %>
+        <%= link_to image_tag("https://www.aeon.jp/sc/common-responsive/img/index/footbnr/bnr_thanks.jpg", class: :banar), "#" %>
+    </div>
+    <div class="contact-center">
+      <div class="center-top">
+        <h3>
+          【Mall Timeとは？！】
+        </h3>
+        <%= image_tag("https://www.silhouette-illust.com/wp-content/uploads/2019/11/restaurant_map_marker_48579-101x101.jpg", class:"list-pict") %>
+          <p class="tenten">...</p>
+        <%= image_tag("https://www.silhouette-illust.com/wp-content/uploads/2019/10/takeout_mochikaeri_46525-101x101.jpg", class:"list-pict") %>
+        <p>    
+          大好きなレストランの料理をテイクアウト！
+        </p>
+        <p>
+          帰りに出来立て料理を受け取れる<span class="under">テイクアウト予約アプリ</span>の登場です！
+        </p>
+      </div>
+      <div class="cnete-main">
+        <h4>
+          ★Restaurant一覧★
+        </h4>
+          <%# 投稿機能実装後、部分テンプレートでプロトタイプ投稿一覧を表示する %>
+          <%#<%= render partial: "prototype", collection: @prototypes %>
+      </div>
+    </div>
   </div>
 </main>

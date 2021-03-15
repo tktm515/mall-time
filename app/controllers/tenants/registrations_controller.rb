@@ -59,4 +59,9 @@ class Tenants::RegistrationsController < Devise::RegistrationsController
   # def after_inactive_sign_up_path_for(resource)
   #   super(resource)
   # end
+  private
+
+  def message_params
+    params.require(:message).permit(:content, :image).merge(user_id: current_user.id)
+  end
 end
