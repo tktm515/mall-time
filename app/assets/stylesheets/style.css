@@ -37,6 +37,17 @@ a {
 body{
   padding: 0 100px;
 }
+
+p{
+  margin: 0 10px;
+  font-size: 20px;
+  padding-bottom: 15px;
+  font-family: 'Noto Serif JP', sans-serif;
+}
+
+span{
+  color: red;
+}
 /* ヘッダー */
 
 .header {
@@ -197,7 +208,8 @@ h3{
   display: inline;
   padding-top: 70px;
 }
-p{
+
+.description{
   margin-left: 20px;
   font-size: 30px;
   padding-bottom: 15px;

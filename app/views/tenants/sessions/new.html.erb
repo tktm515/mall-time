@@ -1,11 +1,10 @@
 <%= form_with model: @tenant, url: new_tenant_session_path, class: 'session-main', local: true do |f| %>
 
-  <div class="form-group">
+ 
     <div class='form-tenantID'>
       <label class="form-tenantID-text">店舗ID</label>
     </div>
     <%= f.text_field :tenant_ID, class:"user-input-default", id:"tenant-ID", placeholder:"例）abc12345"%>
-  </div>
       
   <div class="field-email_pass">
     <div class="field">
@@ -20,7 +19,7 @@
   </div>
 
 
-  <div class="actions">
+  <div class="session-actions">
     <%= f.submit "ログイン" %>
   </div>
 
