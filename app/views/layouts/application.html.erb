@@ -29,8 +29,8 @@
             <% else %>
             <%# ログインしていないときは以下を表示するようにしましょう %>
               <div class="nav__right_in">
-                <%= link_to "ログイン", "#", class: :nav__btn %>
-                <%= link_to "新規登録", "#", class: :nav__btn %>
+                <%= link_to "ログイン", "new_user_session", class: :nav__btn %>
+                <%= link_to "新規登録", "new_user_registration", class: :nav__btn %>
                 <%= link_to "Mall:page", "#", class: :nav__btn %>
               </div>
             <% end %>

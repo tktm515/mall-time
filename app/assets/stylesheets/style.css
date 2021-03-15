@@ -42,6 +42,7 @@ body{
 .header {
   padding: 20px 0;
   background-color: lightblue;
+  min-width: 800px
 }
 
 .nav {
@@ -52,12 +53,9 @@ body{
 }
 
 
-.nav__left{
-  padding-right: 150px;
-}
 
 .logo {
-  width: 500px;
+  width: 35vw;
   height: 75px;
 }
 .nav__right {
@@ -68,7 +66,7 @@ body{
 .nav__btn{
   display: inline-block;
   padding: 0.1em 0.5em;
-  font-size: 2em;
+  font-size: 2vw;
   color: white;
   text-decoration: none;
   user-select: none;
@@ -102,10 +100,6 @@ body{
 
 .form__text {
   width: 50%;
-}
-
-.field{
-  margin: 10px 0;
 }
 
 .actions{
@@ -345,6 +339,8 @@ h4{
 }
 
 /* ユーザーページ */
+
+
 .user__wrapper{
   min-height: calc(100vh - 161px);
 }
