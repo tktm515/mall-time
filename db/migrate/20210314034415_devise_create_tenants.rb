@@ -5,7 +5,7 @@ class DeviseCreateTenants < ActiveRecord::Migration[6.0]
     create_table :tenants do |t|
       ## Database authenticatable
       t.string :tenant_name,        null: false
-      t.string :tenant_ID           null: false
+      t.string :tenant_ID,          null: false
       t.string :first_name,         null: false
       t.string :family_name,        null: false
       t.string :first_name_kana,    null: false

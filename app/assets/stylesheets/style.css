@@ -442,6 +442,8 @@ h4{
 }
 
 .title1{
+  display: flex;
+  justify-content: center;
   padding-top: 150px;
   font-size: 3vw;
   color: black;
