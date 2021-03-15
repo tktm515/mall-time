@@ -41,7 +41,7 @@ body{
 
 .header {
   padding: 20px 0;
-  background-color: lightblue;
+  background-color: red;
   min-width: 800px
 }
 
@@ -49,7 +49,7 @@ body{
   width: 100%;
   display: flex;
   justify-content: space-between;
-  background-color: lightblue;
+  background-color: red;
 }
 
 
@@ -74,7 +74,7 @@ body{
   border-radius: 3px;
   transition: 0.4s ease;
   margin-right: 15px;
-  background-color: lightblue;
+  background-color: red;
 }
 .nav__btn:hover{
   color: #fff;
@@ -102,9 +102,6 @@ body{
   width: 50%;
 }
 
-.actions{
-  margin-bottom: 40px;
-}
 
 .form__btn{
   display: inline-block;
@@ -137,8 +134,7 @@ body{
 .title-contents{
   width: calc(100vw - 215px);
   height: 100%;
-  min-width: auto;
-  min-height: auto;
+  min-width: 800px;
   background-image:url("https://s1.1zoom.me/big0/356/Salads_Vegetables_Wood_planks_Bottle_561463_1280x853.jpg") ;
   background-size: 100%;
   background-repeat: no-repeat;
@@ -147,20 +143,20 @@ body{
 .service-title{
   color: white;
   font-size: 5vw;
-  padding-left: 60px;
+  padding-right: 400px;
   padding-top: 30px;
-  min-width: auto;
-  min-height: auto;
+  min-width: 800px;
 }
 
 .main-body{
-  background-color:lightblue;
+  background-color:red;
   margin: 0, 50px, 0 ,50px;
   display: flex;
 }
 
 .contact-left{
   width: 250px;
+  color:white;
 }
 
 h5{
@@ -182,8 +178,6 @@ h5{
   background-color: white;
 }
 
-.center-top{
-}
 
 @import url('https://fonts.googleapis.com/css?family=Noto+Serif+JP');
 
@@ -376,6 +370,7 @@ h4{
 .footer {
   background-color: #999;
   padding: 10px 0;
+  min-width: 800px
 }
 
 .footer_btn{
@@ -397,4 +392,45 @@ h4{
   text-align: center;
   color: #fff;
   font-size: 10px;
+}
+
+/* テナントページ */
+.tenant_page{
+  width: 100%;
+  min-width: 800px;
+  height: 100vh;
+  background-color: #f5f5f5;
+  justify-content: center;
+  background-image: url("https://image.freepik.com/free-psd/italian-cuisine-wallpaper-with-pasta_23-2148369857.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.tenant_menu{
+  display: flex;
+  justify-content: center;
+  display: grid;
+  margin-top: 75px;
+
+}
+
+.tenant_btn{
+  display: inline-block;
+  margin-bottom: 50px;
+  padding: 0.1em 0.5em;
+  font-size: 2vw;
+  color: white;
+  text-decoration: none;
+  user-select: none;
+  border: 0.2px black solid;
+  border-radius: 3px;
+  transition: 0.4s ease;
+  margin-right: 15px;
+  background-color: gray;
+}
+
+.title1{
+  padding-top: 150px;
+  font-size: 3vw;
+  color: black;
 }

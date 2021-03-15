@@ -4,14 +4,22 @@
   height: 100%;
   background-color: #f5f5f5;
   justify-content: center;
+  background-image: url("http://img.kb-cdn.com/imgviewer/NVpIM2ptOHhYRzVmUk5rM1NrNlFxYVV6enV4aGk2UFRJMmxPckdDUUVNWjcvQkpZcmd4aFMwZkd0UWc2N3V2elpVRlYrWlRyTFhBTm1FUTZ5eXdpRmtLWjhzTnN4ZVNXYWRiY1VQS0s2TXNyZUNKdmdkNDIwdGF6SlpIdWhNOGdLdEY2QmZiSXNUajFyTEU4YW1Udm1ZYVdra0RzUUsrZzJLM25vRGhiaWE1M0JoVlZtWGxXdUxMUHVIcHlVMUFvakFnSFZZeFM3UkRaS3lGcDBSMTI2Y25EWG1peGdoTjIzR3c2eGpVNExDTT0=?square=0");
+  background-size: 100% 100%;
+  opacity: 0.9;
+  background-repeat: no-repeat;
+  color:white;
 }
 
 .img-upload{
   width: 50%;
   display: flex;
   flex-direction: column;
-  margin: 0 auto;
   padding-top: 20px;
+}
+.img-upload{
+  padding-top: 70px;
+  padding-left: 275px;
 }
 
 .click-upload{
@@ -62,9 +70,6 @@
   cursor: pointer;
 }
 
-h6{
-  font-size: 1vw;
-}
 
 .address-group{
   width: 50%;
@@ -74,7 +79,8 @@ h6{
 }
 
 .input-default{
-  height: 35px;
+  height: 3vh;
+  width: 21vw;
 }
 
 .select-box{
@@ -88,11 +94,7 @@ h6{
 
 .actions{
   display: flex;
-  justify-content: center;;
+  justify-content: center;
+  padding-bottom: 20px;
 }
 
-h2{
-  display: flex;
-  justify-content: center;
-  font-size: 2.5vw;
-}

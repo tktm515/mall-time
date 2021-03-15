@@ -1,26 +1,29 @@
-<h2>Log in</h2>
+<%= form_with model: @tenant, url: new_tenant_session_path, class: 'session-main', local: true do |f| %>
 
-<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :password %><br />
-    <%= f.password_field :password, autocomplete: "current-password" %>
-  </div>
-
-  <% if devise_mapping.rememberable? %>
-    <div class="field">
-      <%= f.check_box :remember_me %>
-      <%= f.label :remember_me %>
+  <div class="form-group">
+    <div class='form-tenantID'>
+      <label class="form-tenantID-text">店舗ID</label>
     </div>
-  <% end %>
+    <%= f.text_field :tenant_ID, class:"user-input-default", id:"tenant-ID", placeholder:"例）abc12345"%>
+  </div>
+      
+  <div class="field-email_pass">
+    <div class="field">
+      <%= f.label :email %><br />
+      <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+    </div>
+
+    <div class="field">
+      <%= f.label :password %><br />
+      <%= f.password_field :password, autocomplete: "current-password" %>
+    </div>
+  </div>
+
 
   <div class="actions">
-    <%= f.submit "Log in" %>
+    <%= f.submit "ログイン" %>
   </div>
+
 <% end %>
 
-<%= render "tenants/shared/links" %>
+

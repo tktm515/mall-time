@@ -1,5 +1,8 @@
 class FoodsController < ApplicationController
 
+  def index
+  end
+  
 
   private
 
