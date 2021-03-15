@@ -6,6 +6,21 @@
   justify-content: center;
 }
 
+.img-upload{
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  padding-top: 20px;
+}
+
+.click-upload{
+  margin-top: 10px;
+}
+
+.last-order{
+  width: 200px;
+}
 .form-group {
   width: 50%;
   display: flex;
