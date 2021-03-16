@@ -4,7 +4,8 @@ class CreateReserves < ActiveRecord::Migration[6.0]
       t.references  :user,          foreign_key: true
       t.references  :food,          foreign_key: true
       t.references  :tenant,          foreign_key: true
-
+      t.integer     :hour_id,           null: false
+      t.integer     :minute_id,         null: false
       t.timestamps
     end
   end

@@ -4,12 +4,17 @@ class Tenant < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
-
+  has_one_attached :image
   has_many :foods
   has_many :reserves
-  with_options presence: true do
-    validates :last_order
-    validates :birthday
+  
+  extend ActiveHash::Associations::ActiveRecordExtensions
+  belongs_to :hour
+  belongs_to :minute
+
+  with_options numericality: { other_than: 1 } do
+    validates :hour_id
+    validates :minute_id
   end
 
   with_options presence: true, format: { with: /\A[ぁ-んァ-ヶ一-龥々]+\z/, message: '全角文字を使用してください' } do

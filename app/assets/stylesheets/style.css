@@ -448,3 +448,8 @@ h4{
   font-size: 3vw;
   color: black;
 }
+
+.error_explanation{
+  display: inline;
+}
+ 

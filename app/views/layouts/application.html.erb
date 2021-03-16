@@ -16,14 +16,14 @@
       <div class="inner">
         <div class="nav">    
           <div class="nav__left">
-            <%= link_to image_tag("https://r69.cooltext.com/rendered/cooltext379068498639401.png", class: :logo), root_path %>
+            <%= link_to image_tag("logo.png", class: :logo), root_path %>
           </div>
           <%# ログインしているときは以下を表示するようにしましょう %>
           <div class="nav__right">
             <% if user_signed_in? %>
               <div class="nav__right_in"> 
                 <%= link_to "マイページ", "#", class: :nav__btn %>
-                <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: :nav__logout %>
+                <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: :nav__btn %>
                 <%= link_to "Mall:page", "#", class: :nav__btn %>
               </div>  
             <% else %>
@@ -47,11 +47,7 @@
           <li><%= link_to "プライバシーポリシー", "#", class: :footer_btn%></li>
           <li><%= link_to "推奨環境", "#", class: :footer_btn%></li>
           <li><%= link_to "ご利用規約", "#", class: :footer_btn%></li>
-        <% if tenant_signed_in? %>
-          <li><%= link_to "出品", "#", class: :footer_btn%></li>
-        <<% else %>
           <li><%= link_to "テナント様はこちら", foods_path, class: :footer_btn%></li>
-        <% end %>
         </ul>
       <p class="copyright">Copyright © Mall Time All rights reserved.</p>
       </div>

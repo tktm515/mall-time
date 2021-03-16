@@ -7,6 +7,9 @@ class User < ApplicationRecord
 
   has_many :reserves
   
+  extend ActiveHash::Associations::ActiveRecordExtensions
+    belongs_to :prefecture
+
 
   with_options presence: true do
     validates :city
