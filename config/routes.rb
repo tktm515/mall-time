@@ -13,4 +13,6 @@ Rails.application.routes.draw do
   resources :shops
   resources :foods
 
+  resources :users, only: :show
+
 end
