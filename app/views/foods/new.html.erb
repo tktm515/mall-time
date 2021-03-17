@@ -1,0 +1,44 @@
+<%= form_with model: @food, url: foods_path, class: 'food-main', local: true do |f| %>
+  <div class=>
+    <div class="img-upload">
+      <div class="weight-bold-text">
+        料理の写真
+        <span class="indispensable">必須</span>
+      </div>
+      <div class="click-upload">
+        <%= f.file_field :image, id:"item-image" %>
+      </div>
+    </div>
+
+    <div class="form-group">
+        <div class='form-text-wrap'>
+          <label class="form-text">商品名</label>
+          <span class="indispensable">※必須</span>
+        </div>
+        <%= f.text_field :food_name, class:"input-default", id:"food_name", placeholder:"例）冷製トマトパスタ"%>
+      </div>
+
+      <div class="form-group">
+        <div class='form-text-wrap'>
+          <label class="form-text">商品説明</label>
+          <span class="indispensable">※必須</span>
+        </div>
+        <%= f.text_area :food_text, class:"input-text", id:"food_text", placeholder:"例）夏にぴったり！さっぱりトマトの冷製パスタ"%>
+      </div>
+    </div>
+    <div class="form-group">
+      <div class='form-text-wrap'>
+        <label class="form-text">値段（税込）</label>
+        <span class="indispensable">※必須</span>
+      </div>
+    </div>
+    <div class='form-price'>
+      <%= f.text_field :price, class:"input-price", id:"price", placeholder:"例) 1280" %><p>円</p>
+    </div>
+
+  <div class="food-actions">
+    <%= f.submit "商品登録" %>
+  </div>
+  
+
+<% end %>
