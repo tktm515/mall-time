@@ -1,0 +1,55 @@
+.show-main{
+  width: 100%;
+  min-width: 800px;
+  height: 100vh;
+  background-color: #f5f5f5;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  color:black;
+}
+
+/* ユーザーページ */
+
+.user_name_show{
+  margin: auto;
+}
+
+.table{
+  border-collapse: collapse;
+  margin-bottom: 32px;
+  width: 100%;
+}
+.table__col1{
+  text-align: center;
+  font-weight: bold;
+  background: #fafafa;
+  border-collapse: collapse;
+  border: 1px solid gray;
+  width: 150px;
+  padding: 8px;
+}
+.table__col2{
+  text-align: center;
+  border: 1px solid #f5f5f5;
+  border-collapse: collapse;
+  width: 300px;
+  padding: 16px 8px;
+  padding-left: 50px;
+}
+
+.user_show_btn{
+  display: inline-block;
+  padding: 0.1em 0.5em;
+  font-size: 2vw;
+  color: white;
+  text-decoration: none;
+  user-select: none;
+  border: 0.2px black solid;
+  border-radius: 3px;
+  transition: 0.4s ease;
+  margin: 20px 150px 20px;
+  background-color: gray;
+}
+

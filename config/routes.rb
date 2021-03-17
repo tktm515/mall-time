@@ -10,4 +10,10 @@ Rails.application.routes.draw do
     registrations: 'users/registrations'
   }
   root to: "shops#index" 
+  resources :shops
+  resources :foods
+
+  resources :users, only: :show
+  resources :tenant, only: :show
+
 end

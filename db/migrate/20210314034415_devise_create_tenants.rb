@@ -5,14 +5,15 @@ class DeviseCreateTenants < ActiveRecord::Migration[6.0]
     create_table :tenants do |t|
       ## Database authenticatable
       t.string :tenant_name,        null: false
-      t.string :tenant_ID           null: false
+      t.string :tenant_ID,          null: false
       t.string :first_name,         null: false
       t.string :family_name,        null: false
       t.string :first_name_kana,    null: false
       t.string :family_name_kana,   null: false
       t.string :email,              null: false, default: ""
       t.string :encrypted_password, null: false, default: ""
-      t.string :last_order,         null: false
+      t.integer :hour_id,           null: false
+      t.integer :minute_id,         null: false
       ## Recoverable
       t.string   :reset_password_token
       t.datetime :reset_password_sent_at

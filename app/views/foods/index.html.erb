@@ -1,0 +1,16 @@
+<div class="tenant_page">
+  <h2 class="title1">【テナントページ】</h2>
+  <div class="tenant_menu">
+    <% if tenant_signed_in? %>
+      <%= link_to "出品", new_food_path, class: :tenant_btn %>
+      <%= link_to "出品商品一覧", "/tenants/#{current_tenant.id}", class: :tenant_btn %>
+      <%= link_to "登録情報編集", edit_tenant_registration_path(current_tenant), class: :tenant_btn %>
+      <%= link_to "ログアウト", destroy_tenant_session_path, :method => :delete, class: :tenant_btn %>
+    <% else %>
+      <%= link_to "新規登録", new_tenant_registration_path, class: :tenant_btn %>
+      <%= link_to "ログイン", new_tenant_session_path , class: :tenant_btn %>
+    <% end %>
+  </div>
+</div>
+
+

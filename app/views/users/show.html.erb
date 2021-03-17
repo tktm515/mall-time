@@ -1,35 +1,50 @@
-<div class="main">
+<div class="show-main">
   <div class="inner">
     <div class="user__wrapper">
-      <h2 class="page-heading">
-        <%= @user.name + "さんの情報"%>
+      <h2 class="user_name_show">
+        <%= "★" + @user.family_name%><%=@user.first_name + "さんの情報★"%>
       </h2>
       <table class="table">
         <tbody>
           <tr>
             <th class="table__col1">名前</th>
-            <td class="table__col2"><%= @user.name %></td>
+            <td class="table__col2"><%= @user.family_name %>　<%= @user.first_name %></td>
           </tr>
           <tr>
-            <th class="table__col1">プロフィール</th>
-            <td class="table__col2"><%= @user.profile %></td>
+            <th class="table__col1">名前（カナ）</th>
+            <td class="table__col2"><%= @user.family_name_kana %>　<%= @user.first_name_kana %></td>
           </tr>
           <tr>
-            <th class="table__col1">所属</th>
-            <td class="table__col2"><%= @user.occupation %></td>
+            <th class="table__col1">Email</th>
+            <td class="table__col2"><%= @user.email %></td>
           </tr>
           <tr>
-            <th class="table__col1">役職</th>
-            <td class="table__col2"><%= @user.position %></td>
+            <th class="table__col1">電話番号</th>
+            <td class="table__col2"><%= @user.phone_num %></td>
+          </tr>
+          <tr>
+            <th class="table__col1">都道府県</th>
+            <td class="table__col2"><%= @user.prefecture.name %></td>
+          </tr>
+          <tr>
+            <th class="table__col1">市町村</th>
+            <td class="table__col2"><%= @user.city %></td>
+          </tr>
+          <tr>
+            <th class="table__col1">番地</th>
+            <td class="table__col2"><%= @user.address %></td>
+          </tr>
+          <tr>
+            <th class="table__col1">建物名</th>
+            <td class="table__col2"><%= @user.building_name %></td>
+          </tr>
+          <tr>
+            <th class="table__col1">生年月日</th>
+            <td class="table__col2"><%= @user.birthday %></td>
           </tr>
         </tbody>
       </table>
-      <h2 class="page-heading">
-        <%= @user.name + "さんのプロトタイプ"%>
-      </h2>
-      <div class="user__card">
-        <%# 部分テンプレートでそのユーザーが投稿したプロトタイプ投稿一覧を表示する %>
-        <%= render partial: "prototypes/prototype", collection: @prototypes %>
+      <%= link_to "会員情報変更", edit_user_registration_path(current_user), class: :user_show_btn %>
       </div>
     </div>
   </div>
