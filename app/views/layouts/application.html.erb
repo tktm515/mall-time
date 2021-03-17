@@ -18,8 +18,16 @@
           <div class="nav__left">
             <%= link_to image_tag("logo.png", class: :logo), root_path %>
           </div>
-          <%# ログインしているときは以下を表示するようにしましょう %>
+          
           <div class="nav__right">
+          <%# テナントがログインしているときは以下を表示する %>
+          <% if tenant_signed_in? %>
+          <div class="tenant_login">
+            <%= current_tenant.tenant_name + "がテナント管理モードでログイン中です。" %>
+          </div>
+          <% else %>
+          
+          <%# ユーザーがログインしているときは以下を表示する %>
             <% if user_signed_in? %>
               <div class="nav__right_in"> 
                 <%= link_to "マイページ", "/users/#{current_user.id}", class: :nav__btn %>
@@ -27,13 +35,14 @@
                 <%= link_to "Mall:page", "#", class: :nav__btn %>
               </div>  
             <% else %>
-            <%# ログインしていないときは以下を表示するようにしましょう %>
+            <%# ユーザーがログインしていないときは以下を表示する %>
               <div class="nav__right_in">
                 <%= link_to "ログイン", new_user_session_path, class: :nav__btn %>
                 <%= link_to "新規登録", new_user_registration_path, class: :nav__btn %>
                 <%= link_to "Mall:page", "#", class: :nav__btn %>
               </div>
             <% end %>
+          <% end %>
           </div>
         </div>
       </div>
@@ -47,7 +56,11 @@
           <li><%= link_to "プライバシーポリシー", "#", class: :footer_btn%></li>
           <li><%= link_to "推奨環境", "#", class: :footer_btn%></li>
           <li><%= link_to "ご利用規約", "#", class: :footer_btn%></li>
+
+        <%#ユーザーがログインしている時は以下を表示しない。%>
+        <% unless user_signed_in? %>
           <li><%= link_to "テナント様はこちら", foods_path, class: :footer_btn%></li>
+        <% end %>
         </ul>
       <p class="copyright">Copyright © Mall Time All rights reserved.</p>
       </div>

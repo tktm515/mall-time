@@ -1,0 +1,42 @@
+<div class="show-main">
+  <div class="inner">
+    <div class="user__wrapper">
+      <h2 class="user_name_show">
+        <%="★" + @tenant.tenant_name + "さんの情報★"%>
+      </h2>
+      <table class="table">
+        <tbody>
+          <tr>
+            <th class="table__col1">店舗名</th>
+            <td class="table__col2"><%= @tenant.tenant_name %></td>
+          </tr>
+          <tr>
+            <th class="table__col1">テナントID</th>
+            <td class="table__col2"><%= @tenant.tenant_ID %></td>
+          </tr>
+
+          <tr>
+            <th class="table__col1">Email</th>
+            <td class="table__col2"><%= @user.email %></td>
+          </tr>
+          
+          <tr>
+            <th class="table__col1">担当者名</th>
+            <td class="table__col2"><%= @tenant.family_name %>　<%= @tenant.first_name %></td>
+          </tr>
+          <tr>
+            <th class="table__col1">名前（カナ）</th>
+            <td class="table__col2"><%= @tenant.family_name_kana %>　<%= @tenant.first_name_kana %></td>
+          </tr>
+          <tr>
+            <th class="table__col1">Last Order</th>
+            <td class="table__col2"><%= @tenant.hour.name %></td><td class="table__col2"><%= @tenant.minute.name %></td>
+          </tr>
+          
+        </tbody>
+      </table>
+      <%= link_to "店舗情報変更", edit_user_registration_path(current_user), class: :user_show_btn %>
+      </div>
+    </div>
+  </div>
+</div>

@@ -14,5 +14,6 @@ Rails.application.routes.draw do
   resources :foods
 
   resources :users, only: :show
+  resources :tenant, only: :show
 
 end

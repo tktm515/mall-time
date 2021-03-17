@@ -104,6 +104,12 @@ span{
   opacity: 0.5;
 }
 
+.tenant_login{
+  font-size: 25px;
+  color: white;
+  margin-bottom: 15px;
+}
+
 /* フォーム周り */
 .form__wrapper{
   min-height: calc(100vh - 161px);
