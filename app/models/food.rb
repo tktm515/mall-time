@@ -1,8 +1,7 @@
 class Food < ApplicationRecord
   has_one_attached :image
-
-  has_many: reserves
-  belongs_to: tenant
+  has_many :reserves
+  belongs_to :tenant
 
   
   with_options presence: true do
