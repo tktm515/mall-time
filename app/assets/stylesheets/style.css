@@ -258,12 +258,16 @@ h3{
 .tenant_image{
   width: 100%;
   position: absolute;
+  height: 40%;
 }
 
 .tenant-name{
   background: #a41b18;
   text-align: center;
   color: white;
+  height: 40px;
+  font-size: 25px;
+  font-family: 'Noto Serif JP', sans-serif;
 }
 
 .tenant_show_btn{
@@ -275,7 +279,7 @@ h3{
   border: 0.2px black solid;
   border-radius: 3px;
   transition: 0.4s ease;
-  margin: 570px 110px 50px;
+  margin: 570px 110px 70px;
   background-color: black;
   position: absolute; 
 }

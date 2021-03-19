@@ -1,14 +1,16 @@
 # frozen_string_literal: true
 
 class Users::RegistrationsController < Devise::RegistrationsController
-  before_action :user_devise_permitted_parameters, only: [:create]
+  before_action :user_devise_permitted_parameters, only: [:create, :update]
   
   
   private
 
   def user_devise_permitted_parameters
     devise_parameter_sanitizer.permit(:sign_up,
-                                      keys: [:first_name, :family_name, :first_name_kana, :family_name_kana, :phone_num, :prefecture_id, :city, :address, :buliding_name,
-                                             :birthday])
+      keys: [:first_name, :family_name, :first_name_kana, :family_name_kana, :phone_num, :prefecture_id, :city, :address, :buliding_name,:birthday])
+
+    devise_parameter_sanitizer.permit(:account_update, 
+      keys: [:first_name, :family_name, :first_name_kana, :family_name_kana, :phone_num, :prefecture_id, :city, :address, :buliding_name])                                          
   end
 end
