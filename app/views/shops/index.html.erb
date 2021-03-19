@@ -34,7 +34,9 @@
         <%= link_to image_tag("https://www.aeon.jp/sc/ibaraki/img/index/banner/parking.jpg", class: :banar), "#" %>
         <%= link_to image_tag("https://www.aeon.jp/sc/common-responsive/img/index/footbnr/bnr_thanks.jpg", class: :banar), "#" %>
     </div>
+
     <div class="contact-center">
+      <%#Mall Timeの紹介文%>
       <div class="center-top">
         <h3>
           【Mall Timeとは？！】
@@ -49,13 +51,34 @@
           帰りに出来立て料理を受け取れる<span class="under">テイクアウト予約アプリ</span>の登場です！
         </p>
       </div>
-      <div class="cnete-main">
+      
+      <%#レストラン一覧のタイトル%>
+      <div class="center-title">
         <h4>
           ★Restaurant一覧★
         </h4>
-          <%# 投稿機能実装後、部分テンプレートでプロトタイプ投稿一覧を表示する %>
-          <%#<%= render partial: "prototype", collection: @prototypes %>
       </div>
+
+      <%# 登録テナント一覧を表示する %>
+      <div class="center-main">
+        <div class="tenant-lists">
+          <% @tenants.each do |tenant| %>
+            <div class="tenant-box">  
+              <div class='tenant-name'>
+                【<%= tenant.tenant_name %>】
+              </div>
+              <div class='tenant-img-content'>
+                <%= image_tag tenant.image, class: :tenant_image %>
+              </div>
+              <div class='tenant_text'>
+              </div>
+              <div class="take_out_btn">
+                <%= link_to "テイクアウト予約", tenant_path(tenant.id), class: :tenant_show_btn %>
+              </div>
+            </div>
+          <% end %> 
+        </div>
+      </div>  
     </div>
   </div>
 </main>

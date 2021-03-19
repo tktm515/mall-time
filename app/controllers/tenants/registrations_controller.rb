@@ -1,8 +1,7 @@
 # frozen_string_literal: true
 
 class Tenants::RegistrationsController < Devise::RegistrationsController
-  before_action :tenant_devise_permitted_parameters, only: [:create]
-  # before_action :configure_account_update_params, only: [:update]
+  before_action :tenant_devise_permitted_parameters, only: [:create, :update]
 
  
   private
@@ -14,5 +13,9 @@ class Tenants::RegistrationsController < Devise::RegistrationsController
   def tenant_devise_permitted_parameters
     devise_parameter_sanitizer.permit(:sign_up,
       keys: [:image,:tenant_name, :tenant_ID, :first_name, :family_name, :first_name_kana, :family_name_kana, :hour_id, :minute_id])
-  end
+    
+    devise_parameter_sanitizer.permit(:account_update, 
+      keys: [:image, :tenant_name, :tenant_ID, :first_name, :family_name, :first_name_kana, :family_name_kana, :hour_id, :minute_id])
+    end
 end
+  
