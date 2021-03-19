@@ -23,7 +23,7 @@
           <%# テナントがログインしているときは以下を表示する %>
           <% if tenant_signed_in? %>
           <div class="tenant_login">
-            <%= current_tenant.tenant_name + "がテナント管理モードでログイン中です。" %>
+            <%= current_tenant.tenant_name %><br/><%= "テナント管理モードでログイン中です。" %>
           </div>
           <% else %>
           
