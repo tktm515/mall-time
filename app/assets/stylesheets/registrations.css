@@ -19,6 +19,7 @@
   margin-top: 15px;
 }
 
+
 /* user */
 
 .form-text-name{
@@ -76,4 +77,9 @@
 /* tenant */
 .time-select{
   margin-top: 20px;
+}
+
+
+.tenant_text{
+  width:  300px;
 }

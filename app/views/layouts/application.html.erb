@@ -59,7 +59,7 @@
 
         <%#ユーザーがログインしている時は以下を表示しない。%>
         <% unless user_signed_in? %>
-          <li><%= link_to "テナント様はこちら", foods_path, class: :footer_btn%></li>
+          <li><%= link_to "テナント様はこちら", "/shops/show/", class: :footer_btn%></li>
         <% end %>
         </ul>
       <p class="copyright">Copyright © Mall Time All rights reserved.</p>

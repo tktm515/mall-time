@@ -2,6 +2,7 @@
   <div class="inner">
     <div class="user__wrapper">
       <h2 class="user_name_show">
+      <% if tenant_signed_in? %>
         <%="★" + @tenant.tenant_name + "さんの情報★"%>
       </h2>
       <table class="table">
@@ -32,7 +33,19 @@
             <th class="table__col1">Last Order</th>
             <td class="table__col2"><%= @tenant.hour.name %></td><td class="table__col2"><%= @tenant.minute.name %></td>
           </tr>
-          
+          <% else %>
+          <tr>
+            <th class="table__col1">店舗名</th>
+            <td class="table__col2"><%= @tenant.tenant_name %></td>
+          </tr>
+          <tr>
+            <th class="table__col1">Last Order</th>
+            <td class="table__col2"><%= @tenant.hour.name %></td><td class="table__col2"><%= @tenant.minute.name %></td>
+          </tr>
+          <tr>
+            <th class="table__col1">電話番号</th>
+            <td class="table__col2"><%= @tenant.hour.name %></td><td class="table__col2"><%= @tenant.minute.name %></td>
+          </tr>
         </tbody>
       </table>
       <%= link_to "店舗情報変更", edit_user_registration_path(current_user), class: :user_show_btn %>

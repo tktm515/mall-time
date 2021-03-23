@@ -19,6 +19,23 @@
       <%= f.text_field :tenant_name, class:"input-default", id:"tenant-name", placeholder:"例）Mall食堂"%>
     </div>
 
+    <div class="form-group">
+        <div class='form-text-wrap'>
+          <label class="form-text">店舗電話番号</label>
+          <span class="indispensable">※必須</span>
+        </div>
+        <%= f.text_field :tenant_phone, class:"input-default", id:"tenant-phone", placeholder:"例）0721231234"%>
+      </div>
+
+      <div class="tenant_text">
+        <div class='form-text-wrap'>
+          <label class="form-text">店舗説明</label>
+          <span class="indispensable">※必須</span>
+        </div>
+        <%= f.text_area :tenant_text, class:"input-text", id:"tenant_text", placeholder:"例）ブーランジェリーBURDIGALAのパンと一緒に、本格派ベーカリーレストラン。"%>
+      </div>
+
+
 
   <div class="form-group">
     <div class='form-text-wrap'>

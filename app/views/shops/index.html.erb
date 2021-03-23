@@ -61,23 +61,24 @@
 
       <%# 登録テナント一覧を表示する %>
       <div class="center-main">
-        <div class="tenant-lists">
+        <ul class="tenant-lists">
           <% @tenants.each do |tenant| %>
-            <div class="tenant-box">  
+            <li class="tenant-box">  
               <div class='tenant-name'>
                 【<%= tenant.tenant_name %>】
               </div>
               <div class='tenant-img-content'>
                 <%= image_tag tenant.image, class: :tenant_image %>
               </div>
-              <div class='tenant_text'>
+              <div class='text_tenant'>
+                <%= tenant.tenant_text%>
               </div>
               <div class="take_out_btn">
-                <%= link_to "テイクアウト予約", tenant_path(tenant.id), class: :tenant_show_btn %>
+                <%= link_to "テイクアウト予約", tenant_path(tenant.id), class: :take_out_btn %>
               </div>
-            </div>
+            </li>
           <% end %> 
-        </div>
+        </ul>
       </div>  
     </div>
   </div>
