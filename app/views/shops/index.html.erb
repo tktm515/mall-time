@@ -74,7 +74,7 @@
                 <%= tenant.tenant_text%>
               </div>
               <div class="take_out_btn">
-                <%= link_to "テイクアウト予約", tenant_path(tenant.id), class: :take_out_btn %>
+                <%= link_to "テイクアウト予約",  tenant_reserves_path(tenant.id), class: :take_out_btn %>
               </div>
             </li>
           <% end %> 
