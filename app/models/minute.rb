@@ -5,6 +5,6 @@ class Minute < ActiveHash::Base
     { id: 5, name: '30分' }, { id: 6, name: '40分' }, { id: 7, name: '50分' }
   ]
   include ActiveHash::Associations
-  has_many :tenant
-  has_many :reserve
+  has_many :tenants
+  has_many :reserves
 end

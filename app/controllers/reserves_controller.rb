@@ -1,8 +1,8 @@
 class ReservesController < ApplicationController
 
-  def index
-    @foods = Food.all.order('created_at DESC')
+  def index 
     @tenant = Tenant.find(params[:tenant_id])
+    @foods = @tenant.foods
   end
 
   def new

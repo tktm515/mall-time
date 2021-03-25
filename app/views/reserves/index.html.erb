@@ -1,6 +1,6 @@
-<div class="show-main">
-  <div class="inner">
-    <div class="user__wrapper">
+<div class="main">
+  <div class="reserve-header">
+    <div class="tenant-show">
       <h2 class="user_name_show">
         <%="★" + @tenant.tenant_name + "★"%>
       </h2>
@@ -14,18 +14,45 @@
 
           <tr>
             <th class="table__col1">Last Order</th>
-            <td class="table__col2"><%= @tenant.hour.name %></td><td class="table__col2"><%= @tenant.minute.name %></td>
+            <td class="table__col2"><%= @tenant.hour.name %><%= @tenant.minute.name %></td>
           </tr>     
         </tbody>
       </table>
-      <div class="center-title">
-        <h4>
-          ★商品一覧★
-        </h4>
-      </div>
-      
-     
-      </div>
     </div>
   </div>
+
+  <div class="center-title">
+    <h4>
+      ★商品一覧★
+    </h4>
+  </div>
+  <%= form_with model: @reserve, url: tenant_reserves_path, class: 'foods-main', local: true do |f| %>
+    <ul class="foods-contents">
+      <% @foods.each do |food| %>
+        <li class="food-box">  
+          <div class='food-image'>
+            <%= image_tag food.image, class: :food_image %>
+          </div>
+          <div class='food-name'>
+            【<%= food.food_name %>】
+          </div>
+          <div class='food-price'>
+            <%= food.price%> 円
+          </div>
+          <div class="food-select">
+          </div>
+        </li>
+      <% end %> 
+    </ul>
+    <div class='take-time'>
+      <label class="form-text">お持ち帰り時間</label>
+      <span class="indispensable">※必須</span><br/>
+      <%= f.collection_select(:hour_id, Hour.all, :id, :name, {}, {class:"select-box", id:"hour"}) %>
+      <%= f.collection_select(:minute_id, Minute.all, :id, :name, {}, {class:"select-box", id:"minute"}) %>
+    </div>
+
+    <div class="reserve-actions">
+    <%= f.submit "予約する" %>
+  </div>
+  <% end %> 
 </div>

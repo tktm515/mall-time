@@ -6,9 +6,9 @@ class Food < ApplicationRecord
   
   with_options presence: true do
     validates :image
-    validates :food_name
+    validates :food_name, length: { maximum: 15 }
     validates :price
-    validates :food_text
+    validates :food_text, length: { maximum: 150 }
     validates :tenant_id
   end
 end

@@ -48,12 +48,16 @@ p{
 span{
   color: red;
 }
+
+main{
+  min-width: 1000px;
+}
 /* ヘッダー */
 
 .header {
   padding: 20px 0;
   background-color: red;
-  min-width: 800px
+  min-width: 1000px
 }
 
 .nav {
@@ -149,7 +153,7 @@ span{
 .title-contents{
   width: calc(100vw - 215px);
   height: 100%;
-  min-width: 800px;
+  min-width: 1000px;
   background-image:url("https://s1.1zoom.me/big0/356/Salads_Vegetables_Wood_planks_Bottle_561463_1280x853.jpg") ;
   background-size: 100%;
   background-repeat: no-repeat;
@@ -164,13 +168,13 @@ span{
 }
 
 .main-body{
-  background-color:red;
   margin: 0, 50px, 0 ,50px;
   display: flex;
+  min-width: 700px;
 }
 
 .contact-left{
-  min-width: 250px;
+  background-color:red;
   width: 250px;
   color:white;
 }
@@ -192,6 +196,7 @@ h5{
 .contact-center{
   width: calc(100vw - 250px);
   background-color: white;
+  min-width: 500px;
 }
 
 @import url('https://fonts.googleapis.com/css?family=Noto+Serif+JP');
@@ -234,13 +239,15 @@ h3{
   flex-wrap: wrap;
   justify-content: space-between;
 }
-}
+
 
 .tenant-lists{
   width: 100%;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  min-width: 800px;
+  
 }
 
 .tenant-lists>.tenant-box{
@@ -285,8 +292,10 @@ h3{
 h4{
   font-size: 50px;
   font-family: 'Noto Serif JP', sans-serif;
-  margin-left: 100px;
+  margin-left: 30%;
 }
+
+
 
 
 /* フッター */
@@ -294,7 +303,7 @@ h4{
 .footer {
   background-color: #999;
   padding: 10px 0;
-  min-width: 800px
+  min-width: 1000px
 }
 
 .footer_btn{
