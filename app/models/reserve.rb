@@ -9,7 +9,7 @@ class Reserve < ApplicationRecord
 
   with_options presence: true do
     validates :user_id
-    validates :item_id
+    validates :food_id
     validates :phone_num, format: { with: /\A\d{10,11}\z/ }
   end
 

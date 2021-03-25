@@ -17,6 +17,6 @@ class TenantsController < ApplicationController
   end
 
   def tenant_params
-    params.require(:tenant).permit(:image,:tenant_name, :tenant_ID, :first_name, :family_name, :first_name_kana, :family_name_kana, :hour_id, :minute_id)
+    params.require(:tenant).permit(:image,:tenant_name, :tenant_ID, :first_name, :family_name, :first_name_kana, :family_name_kana, :hour_id, :minute_id, :tenant_phone, :tenant_text)
   end
 end

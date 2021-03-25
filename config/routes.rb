@@ -11,9 +11,13 @@ Rails.application.routes.draw do
   }
   root to: "shops#index" 
   resources :shops
-  resources :foods
+  
 
   resources :users, only: :show
-  resources :tenants
+  resources :tenants do
+    resources :foods 
+    resources :reserves
+    
+  end
 
 end

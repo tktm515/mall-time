@@ -8,6 +8,6 @@ class Hour < ActiveHash::Base
     { id: 14, name: '22時' }
   ]
   include ActiveHash::Associations
-  has_many :tenant
-  has_many :reserve
+  has_many :tenants
+  has_many :reserves
 end

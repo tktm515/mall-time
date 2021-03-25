@@ -27,6 +27,11 @@ class Tenant < ApplicationRecord
     validates :family_name_kana
   end
 
+  with_options presence: true do
+    validates :tenant_phone, format: { with: /\A\d{10,11}\z/ }
+    validates :tenant_text, length: { maximum: 150 }
+  end
+
   PASSWORD_REGEX = /\A(?=.*?[a-z])(?=.*?\d)[a-z\d]+\z/i.freeze
   validates_format_of :password, with: PASSWORD_REGEX
 end

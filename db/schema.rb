@@ -63,10 +63,12 @@ ActiveRecord::Schema.define(version: 2021_03_14_041956) do
     t.string "family_name", null: false
     t.string "first_name_kana", null: false
     t.string "family_name_kana", null: false
+    t.string "tenant_phone", null: false
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
     t.integer "hour_id", null: false
     t.integer "minute_id", null: false
+    t.text "tenant_text", null: false
     t.string "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"

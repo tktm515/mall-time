@@ -10,10 +10,12 @@ class DeviseCreateTenants < ActiveRecord::Migration[6.0]
       t.string :family_name,        null: false
       t.string :first_name_kana,    null: false
       t.string :family_name_kana,   null: false
+      t.string :tenant_phone,       null: false
       t.string :email,              null: false, default: ""
       t.string :encrypted_password, null: false, default: ""
       t.integer :hour_id,           null: false
       t.integer :minute_id,         null: false
+      t.text   :tenant_text,        null: false
       ## Recoverable
       t.string   :reset_password_token
       t.datetime :reset_password_sent_at

@@ -1,4 +1,4 @@
-<%= form_with model: @food, url: foods_path, class: 'food-main', local: true do |f| %>
+<%= form_with model: @food, url: tenant_foods_path, class: 'food-main', local: true do |f| %>
   <div class=>
     <div class="img-upload">
       <div class="weight-bold-text">
@@ -15,7 +15,7 @@
           <label class="form-text">商品名</label>
           <span class="indispensable">※必須</span>
         </div>
-        <%= f.text_field :food_name, class:"input-default", id:"food-name", placeholder:"例）冷製トマトパスタ"%>
+        <%= f.text_field :food_name, class:"input-default", id:"food-name", placeholder:"例）(15文字以内）冷製トマトパスタ"%>
       </div>
 
       <div class="form-group">
@@ -23,7 +23,7 @@
           <label class="form-text">商品説明</label>
           <span class="indispensable">※必須</span>
         </div>
-        <%= f.text_area :food_text, class:"input-text", id:"food_text", placeholder:"例）夏にぴったり！さっぱりトマトの冷製パスタ"%>
+        <%= f.text_area :food_text, class:"input-text", id:"food_text", placeholder:"例）（150文字以内）夏にぴったり！さっぱりトマトの冷製パスタ"%>
       </div>
     </div>
     <div class="form-group">

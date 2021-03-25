@@ -12,10 +12,10 @@ class Tenants::RegistrationsController < Devise::RegistrationsController
 
   def tenant_devise_permitted_parameters
     devise_parameter_sanitizer.permit(:sign_up,
-      keys: [:image,:tenant_name, :tenant_ID, :first_name, :family_name, :first_name_kana, :family_name_kana, :hour_id, :minute_id])
+      keys: [:image,:tenant_name, :tenant_ID, :first_name, :family_name, :first_name_kana, :family_name_kana, :hour_id, :minute_id, :tenant_phone, :tenant_text])
     
     devise_parameter_sanitizer.permit(:account_update, 
-      keys: [:image, :tenant_name, :tenant_ID, :first_name, :family_name, :first_name_kana, :family_name_kana, :hour_id, :minute_id])
+      keys: [:image, :tenant_name, :tenant_ID, :first_name, :family_name, :first_name_kana, :family_name_kana, :hour_id, :minute_id, :tenant_phone, :tenant_text])
     end
 end
   
