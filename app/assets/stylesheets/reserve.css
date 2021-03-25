@@ -7,8 +7,6 @@
 }
 
 
-
-
 /* 料理一覧 */
 
 .foods-main{
@@ -50,17 +48,27 @@
   text-align: center;
 }
 
-.food-select{
-  width: 40%;
-  height: 35px;
-  text-align: center;
+.sum_price{
+  margin-left: 380px;
+  font-size: 30px;
+  margin-top: 50px;
+}
+
+.sum_price>.price_input{
+  font-size: 30px;
+  width: 150px;
+}
+
+.foods_sum{
+  width: 3em;
+  margin-left: 10px;
 }
 
 .take-time{
   margin-top: 30px;
-  margin-left: 38%;
+  margin-left: 370px;
 }
 
 .reserve-actions{
-  margin-left: 43%;
+  margin-left: 400px;
 }

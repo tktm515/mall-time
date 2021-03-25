@@ -37,13 +37,14 @@
             【<%= food.food_name %>】
           </div>
           <div class='food-price'>
-            <%= food.price%> 円
-          </div>
-          <div class="food-select">
+            <%= food.price%> 円 <%= f.number_field :confirmed, max: 10, class: :foods_sum %> 品
           </div>
         </li>
       <% end %> 
     </ul>
+    <div class="sum_price">
+      合計: <%= f.text_field :sum_price, class: "price_input",size: 7, readonly:"sum_price" %> 円
+    </div>
     <div class='take-time'>
       <label class="form-text">お持ち帰り時間</label>
       <span class="indispensable">※必須</span><br/>
